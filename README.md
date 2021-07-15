@@ -4,7 +4,7 @@
 
 I would be maintaining this blog as a part of my work during the Google Summer of Code Program and even further to provide updates on post-GSoC work, other open-source programs, and initiatives.
 
-The blog can be found [here][https://yemaedahrav.github.io/ameygsocblog/]
+The blog can be found [here](https://yemaedahrav.github.io/ameygsocblog/)
 
 
 #### Follow Amey
