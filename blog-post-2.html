@@ -38,7 +38,7 @@
 				<div class="profile-section pt-3 pt-lg-0">
 				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >			
 					
-					<div class="bio mb-3"> This blog contains the work done in first 2 weeks of the Coding Period<br><a href="about.html">Find out more about me</a></div><!--//bio-->
+					<div class="bio mb-3"> This blog contains the work done from Week 3 till the mid evaluation week<br><a href="about.html">Find out more about me</a></div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
 						<li class="list-inline-item"><a href="https://twitter.com/ameyvarhade"><i class="fab fa-twitter fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/amey-varhade/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
@@ -69,86 +69,38 @@
 	    <article class="blog-post px-3 py-5 p-md-5">
 		    <div class="container">
 			    <header class="blog-post-header">
-				    <h2 class="title mb-2">Preliminaries</h2>
-				    <div class="meta mb-3"><span class="date">Published on 24 June 2021</span><span class="time">5 min read</span></div>
+				    <h2 class="title mb-2">Working with Real Data!</h2>
+				    <div class="meta mb-3"><span class="date">Published on 9 July 2021</span><span class="time">5 min read</span></div>
 			    </header>
 			    
 			    <div class="blog-post-body">
 
-				    <p>The Coding Phase began after the 3-week long Community Bonding period. The Community Bonding period was not very intensive and acted as a good period for getting familiar and setting up the environment ready and getting prepared for the next stage.</p>
+				    <p>Having completed the elementary work on the dummy data in the previous few weeks, I was now ready for the working on the actual data !
+						Each file here consists of 100 timestamps, in each dimension, radial, azimuthal, axial have 96, 128, 512 modes. The size of a single file was about 30GB. The structure was similar to the dummy data we had used in the earlier weeks.
+					</p>
                     
 					<!-- <h3 class="mt-5 mb-3">Apllication Phase</h3> -->
 					<p>
-						We have set up a weekly meetup where I discuss my week’s progress with my mentors, update them on the issues faced and plan on further work. 
+						The first difficulty at this stage was obviously deciding the appropriate method and resource to run the computations on. Working on local setup or on Google Colab was very expensive and consuming and infeasible when done naively.
+We decided to move to the Oscar supercomputing facility at Brown, where the setup got delayed a bit causing the work to slack off a bit. 
+Meanwhile 
 					</p>
 
 					<p>
-					   The Coding phase started off with a meeting with project mentors. The project revolves around understanding the transition to turbulence and turbulent motion of a fluid in a cylindrical pipe. 
+						I would be getting the computations and plots done during this week after getting familiarized with handling the clusters. 
+						The work is now on the cusp of experimentation, the plots would be giving an insight into the coherent states in the motion on which we would build our theory.
+						
 					</p>
 
 					<p>
-                        The motion is described by the very famous Navier-Stokes equation.
-                        This is a nonlinear partial differential equation which makes them interesting and challenging at the same time.
+						These 5 weeks have brought us to the midway stage of the program, where the mentors and students evaluate each other. The Week6 would be the evaluation week. From next week we would begin with the latter half of the project which would involve completing the remaining work, consolidating the code, documentation, reports and other deliverables.
 					</p>
-
-                    <p>
-					We have generated data from the quasilinear simulations of the equation through pseudo-spectral methods. The data collected is for every point in space and time, and is a 4-Dimensional, which includes three scalars representing the velocities along the axis, along the radial and tangential directions along with the scalar pressure component.
-				    </p>
-				    
-				    <!-- <h3 class="mt-5 mb-3">Acceptance</h3>
-				    <p> On May 17, at 11:15 PM I received a mail saying </p>
-					<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">GSoC 2021: Congratulations, your proposal with Machine Learning for Science (ML4SCI) Umbrella Organization has been accepted!
-						</p>
-					</blockquote> -->
-					
-					<p>
-						We construct the covariance matrix and analyse the eigenvalues at each wavenumber, since we apply a fourier transform over the azimuthal dimension.
-					</p>
-
-					<figure class="blog-banner">
-				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/Covariance.png" alt="image"></a>
-				    </figure>
-					
-					<!-- <p>    
-						Find the project links here
-						<a href="https://summerofcode.withgoogle.com/projects/#5955320347623424" target="_blank">GSoC Projects</a>
-						<a href="https://ml4sci.org/gsoc/2021/proposal_TURBULENT.html" target="_blank">ML4SCI </a>
-					</p>	 -->
-
-					<!-- <h5 class="my-3">Coding Phase Begins</h5>
-					<p>I will keep updating this frequently. Looking forward to an amazing summer. Till then</p>
-				    <pre>
-					    <code>
-CodingPase.start()	
-	while 10 Weeks:
-		read()
-		ideate()
-		code()
-		document()
-print("GSoC completed successfully !")
-					    </code>
-				    </pre> -->
-
-					<p>	
-					    Constructing the covariance matrix, we calculate the eigenvalues of the matrix and plot them for each timestamp.
-The eigenvalues for a particular timestamp in transitional flow are plotted below which do not quite capture the motion, the implementation needs to be improved and modified 
-					</p>
-				    
-					<figure class="blog-banner">
-				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/Post1-banner.png" alt="image"></a>
-				    </figure>
-
-					<p> 
-						There are a lot of improvements to be made in the implementation which include parallelizing the code and using trapezoid rule to approximate the riemann integral for the eigenvalue computation.
-I would be finalizing this before moving onto actual data. I would be updating the further work in another post
-                    </p>
 
 			    </div>
 				    
 			    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="blog-post.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-post-2.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="blog-post-1.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="project.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
 				</nav>
 				
 		    </div><!--//container-->
