@@ -69,7 +69,7 @@
 	    <article class="blog-post px-3 py-5 p-md-5">
 		    <div class="container">
 			    <header class="blog-post-header">
-				    <h2 class="title mb-2">Preliminaries</h2>
+				    <h2 class="title mb-2">Eigenvalue Computations and Analysis</h2>
 				    <div class="meta mb-3"><span class="date">Published on 20 July 2021</span><span class="time">5 min read</span></div>
 			    </header>
 			    
@@ -104,21 +104,15 @@
 					
 					<p>
 						We construct the covariance matrix and analyse the eigenvalues at each wavenumber, since we apply a fourier transform over the azimuthal dimension.
+						Before plotting we clip the values in a appropriate range as maintaining values beyond 15 orders of magnitude is not useful.
+						Various colormaps and scales are used for plotting, we use a logarithmic scale, and also look at the values ignoring the first value which is quite high in value. The energy is concentrated in the first mode which is as per our expectation. 
 					</p>
 
 					<figure class="blog-banner">
 				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/Covariance.png" alt="image"></a>
 				    </figure>
 					
-					<!-- <p>    
-						Find the project links here
-						<a href="https://summerofcode.withgoogle.com/projects/#5955320347623424" target="_blank">GSoC Projects</a>
-						<a href="https://ml4sci.org/gsoc/2021/proposal_TURBULENT.html" target="_blank">ML4SCI </a>
-					</p>	 -->
-
-					<!-- <h5 class="my-3">Coding Phase Begins</h5>
-					<p>I will keep updating this frequently. Looking forward to an amazing summer. Till then</p>
-				    <pre>
+				    <!-- <pre>
 					    <code>
 CodingPase.start()	
 	while 10 Weeks:
@@ -131,8 +125,8 @@ print("GSoC completed successfully !")
 				    </pre> -->
 
 					<p>	
-					    Constructing the covariance matrix, we calculate the eigenvalues of the matrix and plot them for each timestamp.
-The eigenvalues for a particular timestamp in transitional flow are plotted below which do not quite capture the motion, the implementation needs to be improved and modified 
+					    The data I have been working so far was the one obtained from the quasi-linear simulations of the Navier-Stokes Equation. The transitional state of flow was considered so far.
+						This is where we would be able to see some pattern of the energy distribution in the modes. We are yet to have the same plots for the fully turbulent state which would be the most exciting ones. 
 					</p>
 				    
 					<figure class="blog-banner">
@@ -147,8 +141,8 @@ I would be finalizing this before moving onto actual data. I would be updating t
 			    </div>
 				    
 			    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="blog-post.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-post-2.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="blog-post-2.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-post-4.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
 				</nav>
 				
 		    </div><!--//container-->
