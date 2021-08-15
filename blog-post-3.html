@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Amey's GSoC Blog</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Amey's GSoC Blog</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >			
+					
+					<div class="bio mb-3"> This blog contains the work done in first 2 weeks of the Coding Period<br><a href="about.html">Find out more about me</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+						<li class="list-inline-item"><a href="https://twitter.com/ameyvarhade"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/amey-varhade/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://github.com/yemaedahrav"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://medium.com/@ameyvarhade"><i class="fab fa-medium fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item">
+					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+					    <a class="nav-link" href="blog-list.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog List</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+					</li>
+				</ul>
+				
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">Preliminaries</h2>
+				    <div class="meta mb-3"><span class="date">Published on 20 July 2021</span><span class="time">5 min read</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+
+				    <p>The basic work has been completed and the results are now available. As discussed earlier after applying the Fast Fourier Transform along the azimuthal direction, we calculated the covariance matrix of the velocity fields together.</p>
+                    
+					<!-- <h3 class="mt-5 mb-3">Apllication Phase</h3> -->
+					<p>
+						We have set up a weekly meetup where I discuss my week’s progress with my mentors, update them on the issues faced and plan on further work. 
+					</p>
+
+					<p>
+					   The Coding phase started off with a meeting with project mentors. The project revolves around understanding the transition to turbulence and turbulent motion of a fluid in a cylindrical pipe. 
+					</p>
+
+					<p>
+                        The motion is described by the very famous Navier-Stokes equation.
+                        This is a nonlinear partial differential equation which makes them interesting and challenging at the same time.
+					</p>
+
+                    <p>
+					We have generated data from the quasilinear simulations of the equation through pseudo-spectral methods. The data collected is for every point in space and time, and is a 4-Dimensional, which includes three scalars representing the velocities along the axis, along the radial and tangential directions along with the scalar pressure component.
+				    </p>
+				    
+				    <!-- <h3 class="mt-5 mb-3">Acceptance</h3>
+				    <p> On May 17, at 11:15 PM I received a mail saying </p>
+					<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">GSoC 2021: Congratulations, your proposal with Machine Learning for Science (ML4SCI) Umbrella Organization has been accepted!
+						</p>
+					</blockquote> -->
+					
+					<p>
+						We construct the covariance matrix and analyse the eigenvalues at each wavenumber, since we apply a fourier transform over the azimuthal dimension.
+					</p>
+
+					<figure class="blog-banner">
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/Covariance.png" alt="image"></a>
+				    </figure>
+					
+					<!-- <p>    
+						Find the project links here
+						<a href="https://summerofcode.withgoogle.com/projects/#5955320347623424" target="_blank">GSoC Projects</a>
+						<a href="https://ml4sci.org/gsoc/2021/proposal_TURBULENT.html" target="_blank">ML4SCI </a>
+					</p>	 -->
+
+					<!-- <h5 class="my-3">Coding Phase Begins</h5>
+					<p>I will keep updating this frequently. Looking forward to an amazing summer. Till then</p>
+				    <pre>
+					    <code>
+CodingPase.start()	
+	while 10 Weeks:
+		read()
+		ideate()
+		code()
+		document()
+print("GSoC completed successfully !")
+					    </code>
+				    </pre> -->
+
+					<p>	
+					    Constructing the covariance matrix, we calculate the eigenvalues of the matrix and plot them for each timestamp.
+The eigenvalues for a particular timestamp in transitional flow are plotted below which do not quite capture the motion, the implementation needs to be improved and modified 
+					</p>
+				    
+					<figure class="blog-banner">
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/Post1-banner.png" alt="image"></a>
+				    </figure>
+
+					<p> 
+						There are a lot of improvements to be made in the implementation which include parallelizing the code and using trapezoid rule to approximate the riemann integral for the eigenvalue computation.
+I would be finalizing this before moving onto actual data. I would be updating the further work in another post
+                    </p>
+
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="blog-post.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-post-2.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+				
+		    </div><!--//container-->
+	    </article>
+	    
+		<!--
+            <section class="promo-section theme-bg-light py-5 text-center">
+		    <div class="container">
+			    <h2 class="title">Promo Section Heading</h2>
+			    <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                <figure class="promo-figure">
+			        <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="assets/images/promo-banner.jpg" alt="image"></a>
+			    </figure>
+		    </div><!--//container-->
+
+	    </section><!--//promo-section-->
+		-->
+	    
+	    
+    </div><!--//main-wrapper-->
+    
+
+    <!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
+    <div id="config-panel" class="config-panel d-none d-lg-block">
+        <div class="panel-inner">
+            <a id="config-trigger" class="config-trigger config-panel-hide text-center" href="#"><i class="fas fa-cog fa-spin mx-auto" data-fa-transform="down-6" ></i></a>
+            <h5 class="panel-title">Choose Colour</h5>
+            <ul id="color-options" class="list-inline mb-0">
+                <li class="theme-1 active list-inline-item"><a data-style="assets/css/theme-1.css" href="#"></a></li>
+                <li class="theme-2  list-inline-item"><a data-style="assets/css/theme-2.css" href="#"></a></li>
+                <li class="theme-3  list-inline-item"><a data-style="assets/css/theme-3.css" href="#"></a></li>
+                <li class="theme-4  list-inline-item"><a data-style="assets/css/theme-4.css" href="#"></a></li>
+                <li class="theme-5  list-inline-item"><a data-style="assets/css/theme-5.css" href="#"></a></li>
+                <li class="theme-6  list-inline-item"><a data-style="assets/css/theme-6.css" href="#"></a></li>
+                <li class="theme-7  list-inline-item"><a data-style="assets/css/theme-7.css" href="#"></a></li>
+                <li class="theme-8  list-inline-item"><a data-style="assets/css/theme-8.css" href="#"></a></li>
+            </ul>
+            <a id="config-close" class="close" href="#"><i class="fa fa-times-circle"></i></a>
+        </div><!--//panel-inner-->
+    </div><!--//configure-panel-->
+
+    
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script>
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="assets/js/demo/style-switcher.js"></script>     
+    
+
+</body>
+</html> 
+
