@@ -38,7 +38,7 @@
 				<div class="profile-section pt-3 pt-lg-0">
 				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >			
 					
-					<div class="bio mb-3"> This blog contains the work done in the week following first evaluation <br><a href="about.html">Find out more about me</a></div><!--//bio-->
+					<div class="bio mb-3"> This blog contains the work done in the last week of July and the fuirst week of August<br><a href="about.html">Find out more about me</a></div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
 						<li class="list-inline-item"><a href="https://twitter.com/ameyvarhade"><i class="fab fa-twitter fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/amey-varhade/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
@@ -69,76 +69,77 @@
 	    <article class="blog-post px-3 py-5 p-md-5">
 		    <div class="container">
 			    <header class="blog-post-header">
-				    <h2 class="title mb-2">Eigenvalue Computations and Analysis</h2>
-				    <div class="meta mb-3"><span class="date">Published on 20 July 2021</span><span class="time">5 min read</span></div>
+				    <h2 class="title mb-2">Further Improvements</h2>
+				    <div class="meta mb-3"><span class="date">Published on 5 August 2021</span><span class="time">5 min read</span></div>
 			    </header>
 			    
 			    <div class="blog-post-body">
 
-				    <p>The basic work has been completed and the results are now available. As discussed earlier after applying the Fast Fourier Transform along the azimuthal direction, we calculated the covariance matrix of the velocity fields together.</p>
+				    <p>Now that we have the results for the azimuthal direction averaged covariance, we consider going one step further by applying Fourier transform (FFT) along both the azimuthal and the axial directions.
+						Now we would have one eigenvalue for each mode k_z and m, which means we would have to employ different strategies to plot the eigenvalues.
+					</p>
                     
+				    <figure class="blog-banner">
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/Covariance2.png" alt="image"></a>
+				    </figure>
+                    
+					<p>Here as we have a fourier transform over the axial direction, the outer integral vanishes as compared to what we had previously
+					</p>
+
+					<figure class="blog-banner">
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/eigen_th_z.png" alt="image"></a>
+				    </figure>
+
 					<!-- <h3 class="mt-5 mb-3">Apllication Phase</h3> -->
 
 					<p>
-                        The motion is described by the very famous Navier-Stokes equation.
-                        This is a nonlinear partial differential equation which makes them interesting and challenging at the same time.
+						Since the input space is now 2-dimensional, it is natural to have heatmaps as below. But we don’t get much information through them.
 					</p>
 
-                    <p>
-					    We have generated data from the quasilinear simulations of the equation through pseudo-spectral methods. The data collected is for every point in space and time, and is a 4-Dimensional, which includes three scalars representing the velocities along the axis, along the radial and tangential directions along with the scalar pressure component.
-				    </p>
-				    
-				    <!-- <h3 class="mt-5 mb-3">Acceptance</h3>
-				    <p> On May 17, at 11:15 PM I received a mail saying </p>
-					<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">GSoC 2021: Congratulations, your proposal with Machine Learning for Science (ML4SCI) Umbrella Organization has been accepted!
-						</p>
-					</blockquote> -->
-					
+					<figure class="blog-banner">
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/s3_heatmap0_adjusted.png" alt="image"></a>
+				    </figure>
+
+					<figure class="blog-banner">
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/s3_log_heatmap_54.png" alt="image"></a>
+				    </figure>
+
 					<p>
-						We construct the covariance matrix and analyse the eigenvalues at each wavenumber, since we apply a fourier transform over the azimuthal dimension.
-						Before plotting we clip the values in a appropriate range as maintaining values beyond 15 orders of magnitude is not useful.
-						Various colormaps and scales are used for plotting, we use a logarithmic scale, and also look at the values ignoring the first value which is quite high in value. The energy is concentrated in the first mode which is as per our expectation. 
+						We plot each ‘vertical slice’ and ‘horizontal slice’ of the heatmap, which implies we fix one of the wavenumbers, either k_z or m and plot the variation of the eigenvalue against the other varying wavenumber 
 					</p>
 
 					<figure class="blog-banner">
-				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/Covariance2.png" alt="image"></a>
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/kz_0_time_0.png" alt="image"></a>
 				    </figure>
 
 					<figure class="blog-banner">
-				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/eigne_th.png" alt="image"></a>
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/kz_511_time_0.png" alt="image"></a>
 				    </figure>
+                    
+					<p>
+						Here we keep the azimuthal wavenumber constant and vary the axial wavenumber. We notice certain flat lines in the graph, they correspond to the values which got clipped off as they were too low and are not worth considering for any practical purpose  
+					</p>
+
+					<figure class="blog-banner">
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/m_0_time_0.png" alt="image"></a>
+				    </figure>
+
+					<figure class="blog-banner">
+				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/m_92_time_0.png" alt="image"></a>
+				    </figure>
+                    
+					<p>
 					
-				    <!-- <pre>
-					    <code>
-CodingPase.start()	
-	while 10 Weeks:
-		read()
-		ideate()
-		code()
-		document()
-print("GSoC completed successfully !")
-					    </code>
-				    </pre> -->
-
-					<p>	
-					    The data I have been working so far was the one obtained from the quasi-linear simulations of the Navier-Stokes Equation. The transitional state of flow was considered so far.
-						This is where we would be able to see some pattern of the energy distribution in the modes. We are yet to have the same plots for the fully turbulent state which would be the most exciting ones. 
-					</p>
-				    
-					<figure class="blog-banner">
-				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/0_log.png" alt="image"></a>
-				    </figure>
-
-					<p> 
-						The values here are plotted on a logarithmic scale and we can notice aliasing as the plots are symmetric about the mid input
-                    </p>
+					The final clean plots for the completely turbulent and fully laminar flows are yet to be finalized and I would be getting through them soon. 
+                    Now what remains is looking at the plots carefully, analysing some particular modes and reconstructing the data through some select modes 
+					Another technique we would like to explore is Deep Learning for Unsupervised Learning. Naturally, autoencoders offer an efficient solution to the problem of transforming the input feature space.
+                    </p>>
 
 			    </div>
 				    
 			    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="blog-post-2.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-post-4.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="blog-post-3.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-post.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
 				</nav>
 				
 		    </div><!--//container-->
@@ -152,10 +153,9 @@ print("GSoC completed successfully !")
                 <figure class="promo-figure">
 			        <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="assets/images/promo-banner.jpg" alt="image"></a>
 			    </figure>
-		    </div><!--//container-->
+		    </div>//container
 
-	    </section><!--//promo-section-->
-		-->
+	    </section>//promo-section-->
 	    
 	    
     </div><!--//main-wrapper-->
